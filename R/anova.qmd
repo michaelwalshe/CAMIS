@@ -116,3 +116,10 @@ df_disease %>%
 #### Type IV {.unnumbered}
 
 In R there is no equivalent operation to the `Type IV` sums of squares calculation in SAS.
+
+::: {.callout-note collapse=true title="Session Info"}
+```{r}
+#| echo: false
+sessioninfo::session_info(c("broom", "emmeans", "rstatix"))
+```
+:::

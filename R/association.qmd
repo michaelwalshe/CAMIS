@@ -89,3 +89,10 @@ For contingency tables larger than $2 \times 2$, p-values are based on simulatio
 ```{r}
 fisher.test(tab2, simulate.p.value=TRUE)
 ```
+
+::: {.callout-note collapse=true title="Session Info"}
+```{r}
+#| echo: false
+sessioninfo::session_info("survival")
+```
+:::
