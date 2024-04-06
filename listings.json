@@ -1,0 +1,29 @@
+[
+  {
+    "listing": "/minutes/index.html",
+    "items": [
+      "/minutes/posts/11Mar2024.html",
+      "/minutes/posts/12Feb2024.html",
+      "/minutes/posts/8Jan2024.html",
+      "/minutes/posts/20Nov2023.html",
+      "/minutes/posts/9oct2023.html",
+      "/minutes/posts/11Sept2023.html",
+      "/minutes/posts/21Aug2023.html",
+      "/minutes/posts/10July2023.html",
+      "/minutes/posts/19June2023.html",
+      "/minutes/posts/15May2023.html",
+      "/minutes/posts/17apr2023.html",
+      "/minutes/posts/13mar2023.html",
+      "/minutes/posts/13Feb2023.html",
+      "/minutes/posts/23Jan2023.html",
+      "/minutes/posts/12Dec2022.html"
+    ]
+  },
+  {
+    "listing": "/blogs/index.html",
+    "items": [
+      "/blogs/posts/202312 highlights blog.html",
+      "/blogs/posts/202305 introduction to CAMIS blog.html"
+    ]
+  }
+]
