@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>McNemar’s test in R</title>
+<title>PHUSE US connect 2024 Poster Presentation by Soma &amp; Vikash</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,59 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -102,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -112,8 +78,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/logo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -123,15 +89,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contribution/contribution.html"> 
+    <a class="nav-link" href="../../contribution/contribution.html"> 
 <span class="menu-text">Contribute</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publication/index.html"> 
+    <a class="nav-link" href="../../publication/index.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -140,11 +106,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-news">    
         <li>
-    <a class="dropdown-item" href="../minutes/index.html">
+    <a class="dropdown-item" href="../../minutes/index.html">
  <span class="dropdown-text">Meeting minutes</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../blogs/index.html">
+    <a class="dropdown-item" href="../../blogs/index.html">
  <span class="dropdown-text">Blogs</span></a>
   </li>  
     </ul>
@@ -176,20 +142,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#performing-mcnemars-test-in-r" id="toc-performing-mcnemars-test-in-r" class="nav-link active" data-scroll-target="#performing-mcnemars-test-in-r">Performing McNemar’s test in R</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">McNemar’s test in R</h1>
+<h1 class="title">PHUSE US connect 2024 Poster Presentation by Soma &amp; Vikash</h1>
 </div>
 
 
@@ -206,71 +166,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="performing-mcnemars-test-in-r" class="level3">
-<h3 class="anchored" data-anchor-id="performing-mcnemars-test-in-r">Performing McNemar’s test in R</h3>
-<p>To demonstrate McNemar’s test, data was used concerning the presence or absence of cold symptoms reported by the same children at age 12 and age 14. A total of 2638 participants were involved.</p>
-<section id="using-the-epibasixmcnemar-function" class="level4">
-<h4 class="anchored" data-anchor-id="using-the-epibasixmcnemar-function">Using the <code>epibasix::mcnemar</code> function</h4>
-<p>Testing for a significant difference in cold symptoms between the two ages using the <code>mcNemar</code> function from the <code>epibasix</code> package can be performed as below. The symptoms for participants at age 12 and age 14 are tabulated and stored as an object, then passed to the <code>mcNemar</code> function. A more complete view of the output is achieved by calling the <code>summary</code> function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epibasix)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">table</span>(colds<span class="sc">$</span>age12, colds<span class="sc">$</span>age14)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>epi_mcn <span class="ot">&lt;-</span> <span class="fu">mcNemar</span>(X)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(epi_mcn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Matched Pairs Analysis: McNemar's Statistic and Odds Ratio (Detailed Summary):
- 
-     
-       No Yes
-  No  707 256
-  Yes 144 212
-
-Entries in above matrix correspond to number of pairs. 
- 
-McNemar's Chi^2 Statistic (corrected for continuity) = 30.802 which has a p-value of: 0
-Note: The p.value for McNemar's Test corresponds to the hypothesis test: H0: OR = 1 vs. HA: OR != 1
-McNemar's Odds Ratio (b/c): 1.778
-95% Confidence Limits for the OR are: [1.449, 2.208]
-The risk difference is: 0.085
-95% Confidence Limits for the rd are: [0.055, 0.115]</code></pre>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/202403PHUSE_US_CONNECT24_Soma_PP.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
 </div>
 </div>
-</section>
-<section id="using-the-statsmcnemar.test-function" class="level4">
-<h4 class="anchored" data-anchor-id="using-the-statsmcnemar.test-function">Using the <code>stats::mcnemar.test</code> function</h4>
-<p>McNemar’s test can also be performed using <code>stats::mcnemar.test</code> as shown below, using the same table <code>X</code> as in the previous section.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mcnemar.test</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    McNemar's Chi-squared test with continuity correction
-
-data:  X
-McNemar's chi-squared = 30.802, df = 1, p-value = 2.857e-08</code></pre>
 </div>
-</div>
-<p>The result is shown without continuity correction by specifying <code>correct=FALSE</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mcnemar.test</span>(X, <span class="at">correct=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    McNemar's Chi-squared test
-
-data:  X
-McNemar's chi-squared = 31.36, df = 1, p-value = 2.144e-08</code></pre>
-</div>
-</div>
-</section>
-<section id="results" class="level4">
-<h4 class="anchored" data-anchor-id="results">Results</h4>
-<p>As default, using <code>summary</code> with <code>epibasix::mcNemar</code> gives additional information to the McNemar’s chi-square statistic. This includes a table to view proportions, and odds ratio and risk difference with 95% confidence limits. The result uses Edward’s continuity correction without the option to remove this, which is consistent with other functions within the package.</p>
-<p><code>stats::mcnemar.test</code> uses a continuity correction as default but does allow for this to be removed. This function does not output any other coefficients for agreement or proportions but (if required) these can be achieved within other functions or packages in R.</p>
+<p>Congratulations, <a href="https://www.linkedin.com/in/soma-sekhar-s-20381416a/">Soma Sekhar Sriadibhatla</a>,&nbsp;on&nbsp;your&nbsp;poster&nbsp;presentation&nbsp;“CAMIS-An&nbsp;open&nbsp;source&nbsp;repository&nbsp;to&nbsp;document&nbsp;differences&nbsp;in&nbsp;statistical&nbsp;methodology&nbsp;software”&nbsp;at PHUSE US&nbsp;Connect&nbsp;2024.</p>
+<p><br>
+A&nbsp;poster&nbsp;was&nbsp;presented&nbsp;on PHUSE DVOST-CAMIS&nbsp;effort&nbsp;to&nbsp;document discrepancies&nbsp;between&nbsp;programming&nbsp;languages&nbsp;such&nbsp;as&nbsp;SAS,&nbsp;R,&nbsp;and&nbsp;Python&nbsp;(due&nbsp;to&nbsp;software&nbsp;default&nbsp;choices)&nbsp;in&nbsp;order&nbsp;to&nbsp;conduct&nbsp;the&nbsp;same&nbsp;end-point&nbsp;analysis,&nbsp;a&nbsp;cheat&nbsp;sheet&nbsp;across multilingual&nbsp;languages,&nbsp;and&nbsp;the&nbsp;CAMIS-ONCO&nbsp;subgroup.<br>
+<br>
+We are pleased to inform you that we have received positive feedback from the industry on our CAMIS repository, which helps them to eliminate the risk of doing end point analysis in a multilingual world.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
