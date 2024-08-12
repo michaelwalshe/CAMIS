@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2024-04-08">
 
-<title></title>
+<title>General linear models is complete</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -97,12 +97,27 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../contribution/contribution.html"> 
 <span class="menu-text">Contribute</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../publication/index.html"> 
-<span class="menu-text">Publications</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-news" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-publications-and-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Publications and projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-publications-and-projects">    
+        <li>
+    <a class="dropdown-item" href="../../publication/white_paper.html">
+ <span class="dropdown-text">White paper</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../publication/conference.html">
+ <span class="dropdown-text">Conferences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../publication/dissertation.html">
+ <span class="dropdown-text">Dissertation</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-news" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">News</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-news">    
@@ -118,9 +133,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/PSIAIMS/CAMIS/">
@@ -148,7 +163,14 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#attendees" id="toc-attendees" class="nav-link active" data-scroll-target="#attendees">Attendees</a></li>
-  <li><a href="#agenda-minutes" id="toc-agenda-minutes" class="nav-link" data-scroll-target="#agenda-minutes">Agenda &amp; Minutes</a></li>
+  <li><a href="#agenda-minutes" id="toc-agenda-minutes" class="nav-link" data-scroll-target="#agenda-minutes">Agenda &amp; Minutes</a>
+  <ul class="collapse">
+  <li><a href="#this-months-achievements" id="toc-this-months-achievements" class="nav-link" data-scroll-target="#this-months-achievements">This months achievements</a></li>
+  <li><a href="#checklist-for-pull-requests" id="toc-checklist-for-pull-requests" class="nav-link" data-scroll-target="#checklist-for-pull-requests">Checklist for pull requests</a></li>
+  <li><a href="#css-connect-progress-update-soma-vikash" id="toc-css-connect-progress-update-soma-vikash" class="nav-link" data-scroll-target="#css-connect-progress-update-soma-vikash">CSS Connect progress update – Soma/ Vikash</a></li>
+  <li><a href="#any-other-conferences-that-people-have-applied-for" id="toc-any-other-conferences-that-people-have-applied-for" class="nav-link" data-scroll-target="#any-other-conferences-that-people-have-applied-for">Any other Conferences that people have applied for?</a></li>
+  <li><a href="#current-assignments" id="toc-current-assignments" class="nav-link" data-scroll-target="#current-assignments">Current assignments</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -157,6 +179,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
+<h1 class="title">General linear models is complete</h1>
 </div>
 
 
@@ -183,14 +206,13 @@ ul.task-list li input[type="checkbox"] {
 <h1>Attendees</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<table class="kable_wrapper table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="kable_wrapper caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 100%">
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<td><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">attendees</th>
@@ -334,6 +356,14 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">Cuifeng Yin</td>
 <td style="text-align: left;">Yes</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">Todd Coffey</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jayashree Vedanayagam</td>
+<td style="text-align: left;">No</td>
+</tr>
 </tbody>
 </table></td>
 </tr>
@@ -343,48 +373,45 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-</div>
 </section>
 <section id="agenda-minutes" class="level1">
 <h1>Agenda &amp; Minutes</h1>
+<section id="this-months-achievements" class="level2">
+<h2 class="anchored" data-anchor-id="this-months-achievements">This months achievements</h2>
+<p>General Linear Models is Complete !</p>
+<p>Thanks David &amp; others for great contributions this month.</p>
+<p>We are seeing more python examples coming through too.</p>
+</section>
+<section id="checklist-for-pull-requests" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-for-pull-requests">Checklist for pull requests</h2>
+<p>Christina will add something to help ensure a smooth process</p>
+</section>
+<section id="css-connect-progress-update-soma-vikash" class="level2">
+<h2 class="anchored" data-anchor-id="css-connect-progress-update-soma-vikash">CSS Connect progress update – Soma/ Vikash</h2>
+<p>Vikash to reach out to Soma. Harshil unlikely to be available in person, so we can look for further support to attend &amp; help you if needed.</p>
+</section>
+<section id="any-other-conferences-that-people-have-applied-for" class="level2">
+<h2 class="anchored" data-anchor-id="any-other-conferences-that-people-have-applied-for">Any other Conferences that people have applied for?</h2>
 <ul>
-<li>This months achievements -&nbsp; General Linear Models is Complete !</li>
+<li>Lukus &amp; Stephen are attending PHUSE EU Connect with other topics, but if others going CAMIS members could meet up in person, TBC nearer the date</li>
 </ul>
-<pre><code>-   Thanks David &amp; others for great contributions this month.
-
--   We are seeing more python examples coming through too.</code></pre>
+</section>
+<section id="current-assignments" class="level2">
+<h2 class="anchored" data-anchor-id="current-assignments">Current assignments</h2>
+<p>Lyn to put together Table so we can easily see whose doing what.</p>
 <ul>
-<li>Checklist for pull requests</li>
+<li><p>Sarah Rathwell &amp; Christina volunteered to work on Kolmogorov-Smirnov test</p></li>
+<li><p>Lukas Brausch to pick up Python one sample t-test, paired &amp; 2 sample t-test</p></li>
+<li><p>Chi to reach out to open stats ware to see if they can improve MMRM &amp; add any bayesian MMRM</p></li>
+<li><p>Leon to look at Reference-based MI (using either SAS macro, or procedures directly).</p></li>
+<li><p>Keaven/Martin to look at group sequential design</p></li>
+<li><p>CAMIS-ONCO no kick off yet, so Stephen McCawille will start to look at SAS Accelerated failure time models, Volunteer needed to run the same in R.</p></li>
+<li><p>Todd/Cuifeng will be looking at Non linear models</p></li>
+<li><p>ALL - if you are looking for an assignment reach out to Christina &amp; Lyn and we can group you together to collaborate.</p></li>
 </ul>
-<pre><code>-   Christina will add something to help ensure a smooth process</code></pre>
-<ul>
-<li>CSS Connect progress update – Soma/ Vikash</li>
-</ul>
-<pre><code>-   Vikash to reach out to Soma. Harshil unlikely to be available in person, so we can look for further support to attend &amp; help you if needed.</code></pre>
-<ul>
-<li>Any other Conferences that people have applied for?</li>
-</ul>
-<pre><code>-   Lukus &amp; Stephen are attending PHUSE EU Connect with other topics, but if others going CAMIS members could meet up in person, TBC nearer the date</code></pre>
-<ul>
-<li>Current assignments – Lyn to put together Table so we can easily see whose doing what.</li>
-</ul>
-<pre><code>-   Sarah Rathwell &amp; Christina volunteered to work on Kolmogorov-Smirnov test
-
--   Lukas Brausch to pick up Python one sample t-test, paired &amp; 2 sample t-test
-
--   Chi to reach out to open stats ware to see if they can improve MMRM &amp; add any bayesian MMRM
-
--   Leon to look at Reference-based MI (using either SAS macro, or procedures directly).
-
--   Keaven/Martin to look at group-sequential design
-
--   CAMIS-ONCO no kick off yet, so Stephen McCawille will start to look at SAS Accelerated failure time models, Volunteer needed to run the same in R.
-
--   Todd/Cuifeng will be looking at Non linear models
-
--   ALL - if you are looking for an assignment reach out to Christina &amp; Lyn and we can group you together to collaborate.</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -423,18 +450,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -466,7 +482,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -474,7 +512,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

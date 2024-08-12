@@ -2,14 +2,17 @@
   {
     "listing": "/blogs/index.html",
     "items": [
-      "/blogs/posts/202312 highlights blog.html",
-      "/blogs/posts/202305 introduction to CAMIS blog.html",
-      "/blogs/posts/202403 phuseUS2024.html"
+      "/blogs/posts/202305_introduction_to_CAMIS_blog.html",
+      "/blogs/posts/202312_highlights_blog.html",
+      "/blogs/posts/202403_phuseUS2024.html"
     ]
   },
   {
     "listing": "/minutes/index.html",
     "items": [
+      "/minutes/posts/15July2024.html",
+      "/minutes/posts/10June2024.html",
+      "/minutes/posts/13May2024.html",
       "/minutes/posts/8Apr2024.html",
       "/minutes/posts/11Mar2024.html",
       "/minutes/posts/12Feb2024.html",

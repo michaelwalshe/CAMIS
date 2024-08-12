@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -130,12 +130,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../contribution/contribution.html"> 
 <span class="menu-text">Contribute</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../publication/index.html"> 
-<span class="menu-text">Publications</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-news" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-publications-and-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Publications and projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-publications-and-projects">    
+        <li>
+    <a class="dropdown-item" href="../publication/white_paper.html">
+ <span class="dropdown-text">White paper</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../publication/conference.html">
+ <span class="dropdown-text">Conferences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../publication/dissertation.html">
+ <span class="dropdown-text">Dissertation</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-news" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">News</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-news">    
@@ -151,9 +166,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/PSIAIMS/CAMIS/">
@@ -182,7 +197,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
-  <li><a href="#available-r-package" id="toc-available-r-package" class="nav-link" data-scroll-target="#available-r-package">Available R package</a></li>
+  <li><a href="#useful-references" id="toc-useful-references" class="nav-link" data-scroll-target="#useful-references">Useful References</a></li>
+  <li><a href="#available-r-packages" id="toc-available-r-packages" class="nav-link" data-scroll-target="#available-r-packages">Available R packages</a></li>
   <li><a href="#example-birth-weight" id="toc-example-birth-weight" class="nav-link" data-scroll-target="#example-birth-weight">Example: Birth Weight</a></li>
   </ul></li>
   </ul>
@@ -212,11 +228,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level1">
 <h1>Overview</h1>
-<p>Wilcoxon rank sum test, or equivalently, Mann-Whitney U-test is a rank based non-paramatric method. The aim is to examine the differences between two groups. To be more specific, it tests whether the median difference between pairs is equal to zero.</p>
-<p>It is the non-parametric equivalent to two-sample t-test, where the two groups are not paired.</p>
-<section id="available-r-package" class="level2">
-<h2 class="anchored" data-anchor-id="available-r-package">Available R package</h2>
-<p>The <code>stats</code> package implements various classic statistical tests, including wilcoxon rank sum test.</p>
+<p>Wilcoxon rank sum test, or equivalently, Mann-Whitney U-test is a rank based non-parametric method. The aim is to compare two independent groups of observations. Under certain scenarios, it can be thought of as a test for median differences, however this is only valid when: 1) both samples are independent and identically distributed (same dispersion, same shape, not necessarily normal) and 2) are symmetric around their medians.</p>
+<p>Generally, with two samples of observations (A and B), the test uses the mean of each possible pair of observations in each group (including the pair of each value with itself) to test if the probability that (A&gt;B) &gt; probability (B&gt;A).</p>
+<p>The Wilcoxon rank sum test is often presented alongside a Hodges-Lehmann estimate of the pseudo-median (the median of the Walsh averages), and an associated confidence interval for the pseudo-median.</p>
+<p>A tie in the data exists when an observation in group A, has the same result as an observation in group B.</p>
+<section id="useful-references" class="level2">
+<h2 class="anchored" data-anchor-id="useful-references">Useful References</h2>
+<ul>
+<li><a href="https://support.minitab.com/en-us/minitab/help-and-how-to/statistics/nonparametrics/how-to/1-sample-wilcoxon/methods-and-formulas/methods-and-formulas">Methods and Formulae</a></li>
+<li><a href="https://github.com/adrianolszewski/Mann-Whitney-is-not-about-medians-in-general">Mann Whitney is not about medians in general</a></li>
+<li><a href="https://stats.stackexchange.com/questions/215889/prove-the-relationship-between-walsh-averages-and-wilcoxon-signed-rank-test">Relationship between walsh averages and WRS</a></li>
+<li><a href="https://aakinshin.net/posts/r-hodges-lehmann-problems">Hodges Lehmann Problems</a></li>
+</ul>
+</section>
+<section id="available-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="available-r-packages">Available R packages</h2>
+<p>There are three main implementations of the Wilcoxon rank sum test in R.</p>
+<ul>
+<li><p><a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/wilcox.test">stats::wilcox.test</a></p></li>
+<li><p><a href="https://cran.r-project.org/web/packages/asht/asht.pdf">asht::wmwTest()</a></p></li>
+<li><p><a href="https://cran.r-project.org/web/packages/coin/coin.pdf">coin::wilcox_test()</a></p></li>
+</ul>
+<p>The <code>stats</code> package implements various classic statistical tests, including Wilcoxon rank sum test. Although this is arguably the most commonly applied package, this one does not account for any ties in the data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># x, y are two unpaired vectors. Do not necessary need to be of the same length.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>stats<span class="sc">::</span><span class="fu">wilcox.test</span>(x, y, <span class="at">paired =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -327,18 +360,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -370,7 +392,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -378,7 +422,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
