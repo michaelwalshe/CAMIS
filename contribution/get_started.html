@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,15 +30,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../images/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ebfcb0ed0ac0539375ffcf22e0e9fa78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -111,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../publication/dissertation.html">
- <span class="dropdown-text">Dissertation</span></a>
+ <span class="dropdown-text">Academic projects</span></a>
   </li>  
     </ul>
   </li>
@@ -205,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="set-up-git-github-rstudio">Set up Git, Github, Rstudio</h3>
 <p>You will need to get git, github, and RStudio setup to talk to each other. To do this you will need to have a github account and git installed on your computer.</p>
 <p>To connect your computer to github, we tend to recommend using a PAT because it is bit easier than SSH. We have a script that can help you set that up, found <a href="https://github.com/PSIAIMS/git-training/blob/3abcc07a37aa50be161392a0327007b92cf35f9c/git-cred.R">here</a>.</p>
-<p>For more information Jenny Bryan has a great <a href="https://happygitwithr.com">bookdown</a> explaining how to get setup, alternatively see the following link for a <a href="https://github.com/PSIAIMS/CAMIS/blob/main/minutes/posts/13Feb2023_Contributing%20to%20the%20CAMIS%20project_Setting%20up%20communication%20between%20github%20and%20R%20studio.docx">short guidance</a>.</p>
+<p>For more information Jenny Bryan has a great <a href="https://happygitwithr.com">bookdown</a> explaining how to get setup, alternatively see the following link for a <a href="../contribution/hackathon/contribution_guide_ssh.html">short guidance</a>).</p>
 </section>
 <section id="fork-camis-repository-to-your-own" class="level3">
 <h3 class="anchored" data-anchor-id="fork-camis-repository-to-your-own">Fork CAMIS repository to your own</h3>
@@ -352,8 +353,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -464,7 +463,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

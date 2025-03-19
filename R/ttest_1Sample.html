@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -64,15 +64,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../images/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ebfcb0ed0ac0539375ffcf22e0e9fa78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -145,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="../publication/dissertation.html">
- <span class="dropdown-text">Dissertation</span></a>
+ <span class="dropdown-text">Academic projects</span></a>
   </li>  
     </ul>
   </li>
@@ -195,16 +196,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#one-sample-t-test-in-r" id="toc-one-sample-t-test-in-r" class="nav-link active" data-scroll-target="#one-sample-t-test-in-r"><strong>One Sample t-test in R</strong></a>
-  <ul class="collapse">
-  <li><a href="#data-used" id="toc-data-used" class="nav-link" data-scroll-target="#data-used">Data Used</a></li>
+  <li><a href="#data-used" id="toc-data-used" class="nav-link active" data-scroll-target="#data-used">Data Used</a></li>
   <li><a href="#normal" id="toc-normal" class="nav-link" data-scroll-target="#normal">Normal Data</a>
   <ul class="collapse">
   <li><a href="#base-r" id="toc-base-r" class="nav-link" data-scroll-target="#base-r">Base R</a></li>
   <li><a href="#procs-package" id="toc-procs-package" class="nav-link" data-scroll-target="#procs-package">Procs Package</a></li>
   </ul></li>
   <li><a href="#lognormal" id="toc-lognormal" class="nav-link" data-scroll-target="#lognormal">Lognormal Data</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -230,8 +228,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="one-sample-t-test-in-r" class="level1">
-<h1><strong>One Sample t-test in R</strong></h1>
 <p>The One Sample t-test is used to compare a single sample against an expected hypothesis value. In the One Sample t-test, the mean of the sample is compared against the hypothesis value. In R, a One Sample t-test can be performed using the Base R <code>t.test()</code> from the <strong>stats</strong> package or the <code>proc_ttest()</code> function from the <strong>procs</strong> package.</p>
 <section id="data-used" class="level3">
 <h3 class="anchored" data-anchor-id="data-used">Data Used</h3>
@@ -321,7 +317,6 @@ $TTests
 
 
 </section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -406,8 +401,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -518,7 +511,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
