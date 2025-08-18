@@ -4,7 +4,7 @@ title: "R v SAS rounding"
 
 **Rounding; R and SAS**
 
-Testing testing changes 1 2 3 5.
+Testing testing changes 1 2 3 4.
 
 On comparing the documentation of rounding rules for both languages, it will be noted that the default rounding rule (implemented in the respective language's round() function) are different. Numerical differences arise in the knife-edge case where the number being rounded is equidistant between the two possible results. The round() function in SAS will round the number 'away from zero', meaning that 12.5 rounds to the integer 13. The round() function in Base R will round the number 'to even', meaning that 12.5 rounds to the integer 12. SAS does provide the rounde() function which rounds to even and the cards package in R contains a function round5() that rounds away from zero. In this use case, SAS produces a correct result from its round() function, based on its documentation, as does R. Both are right based on what they say they do, but they produce different results (Rimler, M.S. et al.).
 
