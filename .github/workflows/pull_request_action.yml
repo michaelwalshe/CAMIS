@@ -11,6 +11,9 @@ name: Test Rendering
 
 jobs:
   build-deploy:
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -57,8 +60,6 @@ jobs:
           quarto render
 
       - name: Deploy preview 🔍
-        # Ensure this step only runs if we aren't on a fork, as otherwise it will fail with permissions errors
-        if: ${{ github.event.pull_request.head.repo.full_name == github.event.pull_request.base.repo.full_name }}
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./_site/
