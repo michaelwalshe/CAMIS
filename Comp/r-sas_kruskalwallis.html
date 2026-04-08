@@ -240,13 +240,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>stats<span class="sc">::</span><span class="fu">kruskal.test</span>(Sepal_Width <span class="sc">~</span> Species, <span class="at">data =</span> iris_sub)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>and in SAS using:</p>
-<div class="cell">
-<pre class="sas cell-code"><code>proc npar1way data=iris_sub wilcoxon;
-    class Species;
-    var Sepal_Width;
-    exact;
-run;</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sas code-with-copy"><code class="sourceCode sassyntaxhighlighting"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">proc npar1way</span> <span class="bu">data</span><span class="op">=</span>iris_sub <span class="bu">wilcoxon</span>;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">class</span> Species;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">var</span> Sepal_Width;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">exact</span>;</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">run;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>produced the same results for the test statistic and asymptotic p-value.</p>
 <p>There is a difference between languages in that SAS provides the EXACT option to easily output the exact p-value, where R does not seem to have an equivalent. A Monte Carlo permutation test may offer an alternative to the exact test on R. The <code>coin</code> package could help in implementing this.</p>
 

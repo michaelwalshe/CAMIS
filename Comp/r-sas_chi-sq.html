@@ -302,11 +302,9 @@ X-squared = 11.145, df = 1, p-value = 0.0008424</code></pre>
 </div>
 </div>
 <p>To run a chi-squared test in SAS you used the following code.</p>
-<div class="cell">
-<pre class="sas cell-code"><code>proc freq data=proj1.bronchitis;
-tables Cough*Bronchitis / chisq;
-run;</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sas code-with-copy"><code class="sourceCode sassyntaxhighlighting"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">proc freq</span> <span class="bu">data</span><span class="op">=</span>proj1.bronchitis;</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">tables</span> Cough<span class="op">*</span>Bronchitis <span class="op">/</span> chisq;</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">run;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The result in the “Chi-Square” section of the results table in SAS will not match R, in this case it is 12.1804 with a p-value of 0.0005. This is because by default R does a Yates continuity adjustment for 2x2 tables. To change this set <code>correct</code> to false.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>stats<span class="sc">::</span><span class="fu">chisq.test</span>(bronch, <span class="at">correct =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
